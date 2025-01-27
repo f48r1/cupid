@@ -10,8 +10,8 @@ where a.tid in ({tid_list}) and ac.standard_type='IC50' and (standard_relation='
 valori as (select array_agg(standard_value) va, organism, molregno,tid,canonical_smiles, pref_name, chembl_id from cav_att group by molregno,tid,organism,canonical_smiles, pref_name, chembl_id)
 select * from valori order by array_length(va,1);"""
 
-# FIXME Delete this line before to upload on github
-ADDRESS = "postgresql://mussel:michele@localhost:5434/chembl_34"
+# FIXME Put your address SQL for chembl database
+ADDRESS = "..."
 
 if __name__ == '__main__':
     import argparse

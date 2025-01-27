@@ -43,7 +43,7 @@ def get_all_labels(dir_dataset=DIR_DATASET):
         os.path.join(dir_dataset, data +'.csv'),
         usecols=['label']
         ).squeeze()
-    for data in DATASET # TODO replace this list with a for cycle to recognize csv files
+    for data in DATASET
 }
     return labels_dataset
 
